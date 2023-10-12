@@ -1,6 +1,12 @@
+/* global styles */
 .active{
   color:white;
   background-color: #877c7c;
   display: inline-block;
   border-radius: 2rem;
+}
+
+.red-box{
+  border: dashed 4px red;
+  padding: 20px;
 }

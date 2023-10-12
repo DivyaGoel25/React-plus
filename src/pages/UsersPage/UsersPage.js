@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 console.log("1. Program started");
 const UsersPage = () => {
+  const [isLoading, setIsLoading] = useState([]);
   const [users, setUsers] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     axios
@@ -14,8 +16,10 @@ const UsersPage = () => {
       })
       .catch((err) => {
         console.log(err);
+        setIsError(true);
       })
       .finally(() => {
+        setIsLoading(false);
         console.log("it is over");
       });
     console.log("3. Inside effect");
@@ -44,6 +48,12 @@ const UsersPage = () => {
 
       <div className="row">
         <h2>Listing Users</h2>
+        {/*used for loader*/}
+        {isLoading && 
+        (<div className="spinner-border text-success"></div>)}
+        {isError && (
+          <div className="alert alert-danger">Something went wrong</div>
+        )}
         {users.map((user) => {
           return (
             <div className="col-md-3" key={user.id}>

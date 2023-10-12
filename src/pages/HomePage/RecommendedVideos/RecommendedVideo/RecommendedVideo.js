@@ -46,7 +46,7 @@ RecommendedVideo.propTypes = {
   description: PropTypes.string,
   views: PropTypes.string,
   publishedOn: PropTypes.string,
-  isInWatchlist: PropTypes.string,
+  isInWatchlist: PropTypes.bool,
   index: PropTypes.number,
   handleManageWatchlist: PropTypes.func,
 };

@@ -1,4 +1,4 @@
-import { Helmet, HelmetProvider } from "react-helmet-async"
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const AboutUsPage = () => {
   return (
@@ -7,8 +7,8 @@ const AboutUsPage = () => {
         <title>About Us</title>
       </Helmet>
       <h1>About Us</h1>
-  </HelmetProvider>
-  )
-}
+    </HelmetProvider>
+  );
+};
 
-export default AboutUsPage
+export default AboutUsPage;
