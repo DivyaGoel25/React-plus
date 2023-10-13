@@ -15,7 +15,13 @@ import AddUser from "./pages/UsersPage/AddUser/AddUser";
 import UserDetails from "./pages/UsersPage/UserDetails/UserDetails";
 import HocDemoPage from "./pages/HocDemoPage/HocDemoPage";
 import TodosPage from "./pages/ToDosPage/ToDosPage";
+import { PageContext } from "./contexts/PageContext";
 
+const userStatus ={
+  username : 'Divya',
+  isPremiumUser :true,
+  lastLogin:new Date()
+};
 // App Component Definition
 // this is the ideal place for the layout
 function App() {
@@ -31,6 +37,7 @@ function App() {
         <Header></Header>
 
         <main className="mt-5 pt-2 container">
+          <PageContext.Provider value={userStatus}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             {/*static urls first come then dynamic*/}
@@ -43,6 +50,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUsPage />} />          
             <Route path="*" element={<PageNotFound />} />
           </Routes>
+          </PageContext.Provider>
         </main>
 
         <Footer />

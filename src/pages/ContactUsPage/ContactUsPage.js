@@ -1,7 +1,11 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { StyledButton } from "../Button/Button.styles";
+import { useContext } from "react";
+import { PageContext } from "../../contexts/PageContext";
 
 const ContactUsPage = () => {
+  const userStatus = useContext(PageContext);
+  console.log(userStatus);
   return (
     <HelmetProvider>
       <Helmet>
@@ -9,6 +13,9 @@ const ContactUsPage = () => {
       </Helmet>
       <div>
         <div>ContactUsPage</div>
+        <p>Username: {userStatus.username}</p>
+        <p>Last Login: {userStatus.lastLogin.toString()}</p>
+        <p>Is Premium User: {userStatus.isPremiumUser?"yes":"no"}</p>
         <StyledButton>Styled Component</StyledButton>
       </div>
     </HelmetProvider>
