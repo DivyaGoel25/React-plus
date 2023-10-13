@@ -23,6 +23,16 @@ const MenuList = () => {
           </NavLink>
         </li>
         <li className="nav-item">
+          <NavLink className="nav-link" to="/hoc">
+           HOC
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/todos">
+           ToDos 
+          </NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink className="nav-link" to="/about-us">
           About Us
           </NavLink>
