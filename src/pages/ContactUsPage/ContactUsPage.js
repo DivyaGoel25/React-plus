@@ -7,7 +7,7 @@ const ContactUsPage = () => {
   const userStatus = useContext(PageContext);
   console.log(userStatus);
   return (
-    <HelmetProvider>
+    <div>
       <Helmet>
         <title>Contact Us</title>
       </Helmet>
@@ -18,7 +18,7 @@ const ContactUsPage = () => {
         <p>Is Premium User: {userStatus.isPremiumUser?"yes":"no"}</p>
         <StyledButton>Styled Component</StyledButton>
       </div>
-    </HelmetProvider>
+    </div>
   );
 };
 

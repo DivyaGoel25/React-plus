@@ -6,7 +6,7 @@ import TrendingVideos from "./TrendingVideos/TrendingVideos";
 
 const HomePage = () => {
   return (
-    <HelmetProvider>
+    <div>
       <Helmet>
         <title>Home</title>
       </Helmet>
@@ -75,7 +75,7 @@ const HomePage = () => {
         <h2>Demo of Styles in React App</h2>
         <Subscription />
       </div>
-    </HelmetProvider>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 console.log("1. Program started");
 const UsersPage = () => {
   const [isLoading, setIsLoading] = useState([]);
@@ -49,8 +49,7 @@ const UsersPage = () => {
       <div className="row">
         <h2>Listing Users</h2>
         {/*used for loader*/}
-        {isLoading && 
-        (<div className="spinner-border text-success"></div>)}
+        {isLoading && <div className="spinner-border text-success"></div>}
         {isError && (
           <div className="alert alert-danger">Something went wrong</div>
         )}
@@ -78,6 +77,7 @@ const UsersPage = () => {
           );
         })}
       </div>
+      <Outlet/>
     </section>
   );
 };
