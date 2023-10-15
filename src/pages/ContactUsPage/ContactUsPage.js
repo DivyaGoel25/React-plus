@@ -15,7 +15,7 @@ const ContactUsPage = () => {
         <div>ContactUsPage</div>
         <p>Username: {userStatus.username}</p>
         <p>Last Login: {userStatus.lastLogin.toString()}</p>
-        <p>Is Premium User: {userStatus.isPremiumUser?"yes":"no"}</p>
+        <p>Is Premium User: {userStatus.isPremiumUser ? "yes" : "no"}</p>
         <StyledButton>Styled Component</StyledButton>
       </div>
     </div>

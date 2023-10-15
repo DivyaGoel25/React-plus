@@ -77,7 +77,7 @@ const UsersPage = () => {
           );
         })}
       </div>
-      <Outlet/>
+      <Outlet />
     </section>
   );
 };

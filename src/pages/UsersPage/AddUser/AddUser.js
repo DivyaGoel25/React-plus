@@ -89,7 +89,7 @@ const AddUsers = () => {
                   name="phone"
                   control={control}
                   defaultValue=""
-                  rules={{ required: true,maxLength:10}}
+                  rules={{ required: true, maxLength: 10 }}
                   render={({ field }) => (
                     <input
                       {...field}
